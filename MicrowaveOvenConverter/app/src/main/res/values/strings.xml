@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MicrowaveOvenConverter</string>
+    <string name="label_minutes">分:</string>
+    <string name="label_seconds">秒:</string>
+    <string name="label_before_wattage">変換前</string>
+    <string name="label_after_wattage">変換前</string>
+    <string name="label_hint">メモ欄</string>
+
+    <string name="btn_save">保存する</string>
+    <string name="btn_load">確認する</string>
+</resources>
