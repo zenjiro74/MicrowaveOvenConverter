@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.zenjiro74.microwaveconverter.dao.HistoryDao
 import com.example.zenjiro74.microwaveconverter.data.History
 
-@Database(entities = [History::class], version = 1)
+@Database(entities = [History::class], version = 1, exportSchema = false)
 abstract class HistoryDatabase : RoomDatabase() {
     abstract fun historyDao(): HistoryDao
 
