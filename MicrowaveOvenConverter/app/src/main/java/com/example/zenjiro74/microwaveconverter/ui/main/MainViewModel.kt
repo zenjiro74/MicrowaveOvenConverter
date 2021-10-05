@@ -1,17 +1,15 @@
 package com.example.zenjiro74.microwaveconverter.ui.main
 
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.zenjiro74.microwaveconverter.data.History
 import com.example.zenjiro74.microwaveconverter.HistoryDatabase
-import com.example.zenjiro74.microwaveconverter.data.HistoryRepository
 import com.example.zenjiro74.microwaveconverter.R
-import com.google.android.material.snackbar.Snackbar
+import com.example.zenjiro74.microwaveconverter.data.History
+import com.example.zenjiro74.microwaveconverter.data.HistoryRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

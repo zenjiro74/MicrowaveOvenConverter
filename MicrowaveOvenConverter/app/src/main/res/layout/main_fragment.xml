@@ -26,8 +26,8 @@
             android:hint="@string/label_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:text="@{viewModel.memo}"
             android:minHeight="48dp"
+            android:text="@={viewModel.memo}"
             app:layout_constraintBottom_toTopOf="@+id/btnSave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,42 +104,43 @@
             android:layout_marginBottom="16dp"
             android:minHeight="48dp"
             android:orientation="horizontal"
+            android:weightSum="1"
             app:layout_constraintBottom_toTopOf="@+id/layoutAfter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layoutBefore">
 
-            <TextView
-                android:id="@+id/labelMinutes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.1"
-                android:text="@string/label_minutes" />
-
             <Spinner
                 android:id="@+id/spnMinutes"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.4"
+                android:layout_weight="0.3"
                 android:contentDescription="@string/label_minutes"
                 android:entries="@{viewModel.timeMinutesArr}"
                 android:onItemSelected="@{(parent, view, pos, id) -> viewModel.onItemSelectedTimer(parent, pos)}" />
 
             <TextView
-                android:id="@+id/labelSeconds"
-                android:layout_width="wrap_content"
+                android:id="@+id/labelMinutes"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
-                android:text="@string/label_seconds" />
+                android:text="@string/label_minutes" />
 
             <Spinner
                 android:id="@+id/spnSeconds"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.4"
+                android:layout_weight="0.3"
                 android:contentDescription="@string/label_seconds"
                 android:entries="@{viewModel.timeSecondsArr}"
                 android:onItemSelected="@{(parent, view, pos, id) -> viewModel.onItemSelectedTimer(parent, pos)}" />
+
+            <TextView
+                android:id="@+id/labelSeconds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="@string/label_seconds" />
 
         </LinearLayout>
 
@@ -171,8 +172,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/btn_load"
             android:onClick="@{(view) -> viewModel.onClickLoad(view)}"
+            android:text="@string/btn_load"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
